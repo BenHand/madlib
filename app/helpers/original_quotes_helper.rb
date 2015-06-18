@@ -1,0 +1,2 @@
+module OriginalQuotesHelper
+end
