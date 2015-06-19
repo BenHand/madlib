@@ -7,17 +7,15 @@ class SessionsController < ApplicationController
     @users = User.find_by_email(params[:email])
     if @users  && @users.authenticate(params[:password])
       session[:user_id] = @users.id
-      redirect_to root_path, notice: 'Success'
+      render json: @users
     else
-      flash[:alert] = 'Email or password did not match'
-      redirect_to new_user_path
+      render json: "Email or password does not match.", status: 401
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_path
+    render json: 'Successfully logged out', status: 200
   end
-
 
 end
