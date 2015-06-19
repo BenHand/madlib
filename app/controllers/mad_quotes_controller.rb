@@ -1,0 +1,2 @@
+class MadQuotesController < ApplicationController
+end

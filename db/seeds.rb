@@ -1,7 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+OriginalQuote.create(author: 'Albert Einstein',
+                      quote: 'Learn from yesterday, live for today, hope for tomorrow.
+                               The important thing is not to stop questioning.',
+                input_quote: "['Learn from ', ' live for ', ' hope for ', '. The important thing is not to stop ', '.' ]")
