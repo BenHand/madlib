@@ -9,15 +9,10 @@ class UsersController < ApplicationController
   end
 
   def create
-   new_user = User.create(user_params)
+   new_user = User.create!(name: params[:name], email: params[:email],
+                       password: params[:password],
+                       password_confirmation: params[:password_confirmation])
    render json: new_user
-  end
-
-private
-
-  def user_params
-    params.require(:user).permit(:name, :email, :password,
-                                 :password_confirmation, :bio, :pic_url)
   end
 
 end
