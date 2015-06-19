@@ -37,3 +37,7 @@ $(".registration-form").submit(function(e){
 		users.add(newUser);
 		newUser.save();
 });
+
+$(".pull").click(function(){
+	users.fetch();
+});
