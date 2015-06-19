@@ -10,7 +10,6 @@ var Registration = React.createClass({
             	<input className="email-reg" type="text" placeholder="email"/>
             	<button>Register</button>
             </form>
-            <button className="pull">PULL GODDAMNIT</button>
           </div>
         );
     }
