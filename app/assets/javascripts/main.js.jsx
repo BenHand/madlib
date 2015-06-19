@@ -31,7 +31,7 @@ $(".registration-form").submit(function(e){
 		name: $(".name-reg").val(),
 		password: $(".password-reg").val(),
 		password_confirmation: $(".password-conf-reg").val(),
-		email: $(".email-reg").val(),
+		email: $(".email-reg").val()
 	});
 		console.log(newUser);
 		users.add(newUser);
