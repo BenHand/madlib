@@ -52,10 +52,11 @@ $(".login-form").submit(function(e){
 	)
 	.success(function(u){
 		user = u
-		myApp.navigate("rablibs" {trigger: true})
+		myApp.navigate("rablibs", {trigger: true})
 	})
 	.error(function(errorMsg){
 		alert("Please enter a valid name and password!")
 
 	})
 })
+
