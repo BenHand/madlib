@@ -10,16 +10,20 @@ var RadLibs = React.createClass({
 				<div>
 				{user.name}
 				</div>
-				<form  onSubmit={this.libSubmit} dangerouslySetInnerHTML={{__html: replacedHtml}} />
+				<form onSubmit={this.libSubmit}>
+					<div dangerouslySetInnerHTML={{__html: replacedHtml}} />
+					<button>Submit</button>
+				</form>
 			</div>
 
 		);
 	},
 	libSubmit: function(e){
+		e.preventDefault();
 		var noun = $(".noun-grab")
 		var verb = $(".verb-grab")
 		var adj = $(".adj-grab")
-		console.log(noun)
+		console.log("woooo")
 	}
 });
 	// 	var supaStyle = {

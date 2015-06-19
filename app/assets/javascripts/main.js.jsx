@@ -28,14 +28,6 @@ myApp.navigate('');
 
 var user = null;
 
-// $(".radlib-form").submit(function(){
-// 		e.preventDefault();
-// 		var noun = $(".noun-grab")
-// 		var verb = $(".verb-grab")
-// 		var adj = $(".adj-grab")
-// 		console.log("yayy")
-
-// })
 $(".registration-form").submit(function(e){
 	e.preventDefault();
 	var newUser = new UserModel({
