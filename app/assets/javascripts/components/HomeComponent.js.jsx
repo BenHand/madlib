@@ -3,7 +3,7 @@ var Home = React.createClass({
         return (
           <div>
             <h1> Home Page! </h1>
-            <a href='#edit'>Edit</a>
+            <button className="pull">Pull</button>
           </div>
         );
     }
