@@ -4,6 +4,7 @@ class OriginalQuotesController < ApplicationController
     render json: OriginalQuote.all
   end
 
+# returns a random quote from original quotes table
   def show
     quotes = OriginalQuote.all
     @quote = quotes.sample

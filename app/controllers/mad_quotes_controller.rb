@@ -10,7 +10,7 @@ class MadQuotesController < ApplicationController
 
   def create
     original   = OriginalQuote.find(params[:id])
-    fun_author = original.users.name
+    fun_author = session[:user_id]
     MadQuote.create(fun_quote: params[:fun_quote], fun_author: fun_author,
                       user_id: sesssion[:user_id],
             original_quote_id: original.id)
