@@ -24,7 +24,11 @@ Backbone.history.start();
 myApp.navigate('');
 
 var origQuote = new OriginalQuoteCollection();
-var users = new UserCollection();
+var user = null;
+// var users = new UserCollection();
+// users.fetch({success: function(){
+// 	console.log(users.at(0).get("name"))
+// }});
 $(".registration-form").submit(function(e){
 	e.preventDefault();
 	var newUser = new UserModel({
@@ -37,7 +41,21 @@ $(".registration-form").submit(function(e){
 		users.add(newUser);
 		newUser.save();
 });
+$(".login-form").submit(function(e){
+	$.post(
+		"/session/create",
+		{
+			email: $(".email-log").val(),
+			password: $(".password-log").val()
+		}
 
-$(".pull").click(function(){
-	users.fetch();
-});
+	)
+	.success(function(u){
+		user = u
+		myApp.navigate("rablibs" {trigger: true})
+	})
+	.error(function(errorMsg){
+		alert("Please enter a valid name and password!")
+
+	})
+})
