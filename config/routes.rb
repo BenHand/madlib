@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'sessions/destroy', as: 'logout'
   post 'sessions/create', as: 'login'
   get 'original_quotes/show', to: 'original_quotes#show'
-
+  get 'inspire/show', to: 'inspirations#show'
   resources :users
   resources :original_quotes
   resources :mad_quotes
