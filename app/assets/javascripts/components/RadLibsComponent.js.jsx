@@ -55,19 +55,3 @@ var RadLibs = React.createClass({
 		$(".orig").fadeIn(1000);
 	}
 });
-
-
-// .changeMe{
-// 	color: rgba(0,0,0,0);
-
-// 	input{
-// 		color:black;
-// 		border-style:none;
-// 		border-bottom-style:solid;
-// 		border-bottom-color:black;
-// 		border-bottom-width:2px;
-
-
-// 		}
-
-// }

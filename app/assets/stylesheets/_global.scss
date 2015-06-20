@@ -178,3 +178,20 @@ footer {
 	}
 }
 
+.changeMe{
+	color: rgba(0,0,0,0);
+
+	input{
+		color:black;
+		border-style:solid;
+		border-color:black;
+		border-width:2px;
+		border-radius:5px;
+		margin:3px;
+		width:200px;
+		height:50px;
+		font-size: 20px;
+	}
+
+}
+
