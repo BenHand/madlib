@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     @users = User.find_by_email(params[:email])
     if @users  && @users.authenticate(params[:password])
       session[:user_id] = @users.id
-      render json: @users
+      render json: @users, status: 200
     else
       render json: "Email or password does not match.", status: 401
     end
