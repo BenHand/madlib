@@ -1,19 +1,25 @@
 var RadLibs = React.createClass({
 	render: function () {
-		var quoteHtml = this.props.quote.quote
-		var replacedHtml = quoteHtml.replace(/for/g, "<input type='text' placeholder='noun' class='noun-grab' />")
-		replacedHtml = replacedHtml.replace(/__NOUN__/g, "<input type='text'/>")
-		replacedHtml = replacedHtml.replace(/__VERB__/g, "<input type='text'/>")
-		replacedHtml = replacedHtml.replace(/__ADJECTIVE__/g, "<input type='text'/>")
+		var newQuote = null
+		var chicken = {}
+		var inputQuoteHtml = this.props.quote.input_quote;
+		var replacedHtml = inputQuoteHtml.replace(/__NOUN__/g, "<input type='text' class='noun-grab' placeholder='Noun'/>")
+		replacedHtml = replacedHtml.replace(/__VERB__/g, "<input type='text' class='verb-grab' placeholder='Verb'/>")
+		replacedHtml = replacedHtml.replace(/__ADJECTIVE__/g, "<input type='text' class='adj-grab' placeholder='Adjective'/>")
+
 		return (
 			<div>
 				<div>
 				{user.name}
 				</div>
-				<form onSubmit={this.libSubmit}>
+				<form className="changeMe" onSubmit={this.libSubmit}>
 					<div dangerouslySetInnerHTML={{__html: replacedHtml}} />
 					<button>Submit</button>
 				</form>
+				<div className="new">
+				</div>
+				<div className="orig">
+				</div>
 			</div>
 
 		);
@@ -23,11 +29,41 @@ var RadLibs = React.createClass({
 		var noun = $(".noun-grab")
 		var verb = $(".verb-grab")
 		var adj = $(".adj-grab")
+		var Origquote = this.props.quote.quote;
+		var changedInput = this.props.quote.input_quote
+		noun = noun[0].value
+		verb = verb[0].value
+		adj = adj[0].value
 		console.log("woooo")
+		console.log(noun)
+		console.log(verb)
+		console.log(adj)
+		newQuote = changedInput.replace(/__NOUN__/g, noun)
+		newQuote = newQuote.replace(/__VERB__/g, verb)
+		newQuote = newQuote.replace(/__ADJECTIVE__/g, adj)
+		console.log(newQuote);
+		$(".changeMe").fadeOut(1000)
+		$(".new").append(newQuote)
+		$(".new").hide()
+		$(".new").fadeIn(1000);
+		$(".orig").append(Origquote)
+		$(".orig").hide()
+		$(".orig").fadeIn(1000);
 	}
 });
-	// 	var supaStyle = {
-	// 	color: "blue",
-	// 	fontSize: 150,
-	// 	backgroundColor:"black"
-	// };
+
+
+// .changeMe{
+// 	color: rgba(0,0,0,0);
+
+// 	input{
+// 		color:black;
+// 		border-style:none;
+// 		border-bottom-style:solid;
+// 		border-bottom-color:black;
+// 		border-bottom-width:2px;
+
+
+// 		}
+
+// }

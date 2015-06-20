@@ -3,7 +3,8 @@ var App = Backbone.Router.extend({
 				'': 'home',
 				'login': 'login',
 				"profile/:user":    "profile",
-				"radlibs":          "radlibs"      
+				"radlibs":          "radlibs" ,
+				"resultpage": 		"resultpage"     
 		},
 		home: function() {
 			React.render(<Home/>, document.querySelector('#container'));
@@ -19,7 +20,10 @@ var App = Backbone.Router.extend({
 				React.render(<RadLibs quote={quote}/>, document.querySelector('#container'));
 
 			})
-		}
+		},
+		resultpage: function() {
+			React.render(<RadlibResult/>, document.querySelector('#container'));
+		},
 });
 
 var myApp = new App();
