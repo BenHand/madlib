@@ -4,6 +4,7 @@ var RadLibs = React.createClass({
 		
 		return (
 			<div>
+				<button onClick={this.logout}>Logout</button>
 				<section className="create">
 					<div className="newQuotePage">
 						<div className="sample-quote">
@@ -14,7 +15,7 @@ var RadLibs = React.createClass({
 								<div className="left"></div>
 								<div className="center">
 									<h3 className="new"></h3>
-									<p> -- Author</p>
+									<p className="newAuth"> -- Author</p>
 								</div>
 							</div>
 						</div>
@@ -29,7 +30,7 @@ var RadLibs = React.createClass({
 					</div>
 					<div className="startQuote">
 						<div className="directions">
-							<h3>Enter your word(s) for each space.</h3>
+							<h3>Enter a word for each space.</h3>
 						</div>
 						<div className="word-input center">
 						<form onSubmit={this.libSubmit}>
@@ -59,6 +60,7 @@ var RadLibs = React.createClass({
 		var Origquote = this.props.quote.quote;
 		var changedInput = this.props.quote.input_quote;
 		var originalAuthor = this.props.quote.author;
+		var newAuthor = user.name
 		noun = "<span class='noun'>" + noun[0].value + "</span>";
 		verb = "<span class='verb'>" + verb[0].value + "</span>";
 		adj = "<span class='adjective'>" + adj[0].value + "</span>";
@@ -68,6 +70,7 @@ var RadLibs = React.createClass({
 		var endQuote = newQuote;
 		$(".startQuote").fadeOut(1000);
 		$(".new").html(endQuote);
+		$(".newAuth").html("-- " + newAuthor);
 		$(".origAuth").html("-- " + originalAuthor);
 		$(".new").hide();
 		$(".new").fadeIn(1000);
@@ -75,11 +78,42 @@ var RadLibs = React.createClass({
 		$(".orig").hide();
 		$(".orig").fadeIn(1000);
 		$(".newQuotePage").fadeIn(1000);
-		console.log(endQuote)
+		$(".noun-grab").val("");
+		$(".verb-grab").val("");
+		$(".adj-grab").val("");
 	},
 	reload: function(){
 		$(".newQuotePage").fadeOut(1000);
 		$(".startQuote").fadeIn(1000);
-		replaceProps(this.props.quote);
+		myApp.navigate("");
+		myApp.navigate("radlibs", {trigger: true})
+
+ 	},
+ 	logout: function(){
+ 		myApp.navigate("", {trigger: true})
+		$(".regi-page").hide();
+		$(".login-page").fadeIn(1000);
+		$(".signup-button").hide();
+		$(".hide-me-relog").hide();
+		$(".login-form").submit(function(e){
+			e.preventDefault();
+			$.post(
+				"/sessions/create",
+				{
+					email: $(".email-log").val(),
+					password: $(".password-log").val()
+				}
+
+			)
+			.success(function(u){
+				user = u
+				myApp.navigate("radlibs", {trigger: true})
+				console.log(user);
+			})
+			.error(function(errorMsg){
+				alert("Please enter a valid name and password!")
+
+			})
+		})
 	}
 });

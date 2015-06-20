@@ -17,7 +17,7 @@ var Login = React.createClass({
 									<button className="create-button btn">Create!</button>
 								</form>
 							<div>
-								<h4>First timer?</h4>
+								<h4 className="hide-me-relog">First timer?</h4>
 								<button className="signup-button btn">Register Now!</button>
 							</div>
 						</div>
