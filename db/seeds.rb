@@ -73,22 +73,22 @@ OriginalQuote.create(author: "Forrest Gump",
                 input_quote: "My momma always said, 'Life was like a box of chocolates. You never know what you're gonna get.'")
 OriginalQuote.create(author: "Ferris Bueller",
                       quote: "Life moves pretty fast. You don't stop and look around once in a while, you could miss it.",
-                input_quote: "Life moves pretty fast. You don't stop and look around once in a while, you could miss it.")
-OriginalQuote.create(author: "The Batman",
-                      quote: "I have given a name to my pain, and it is Batman.",
-                input_quote: "I have given a name to my pain, and it is Batman.")
+                input_quote: "__NOUN__ moves pretty fast. You don't stop and look around once in a while, you could miss it.")
+# OriginalQuote.create(author: "The Batman",
+#                       quote: "I have given a name to my pain, and it is Batman.",
+#                 input_quote: "I have given a name to my pain, and it is Batman.")
 OriginalQuote.create(author: "Lester Burnham",
                       quote: "Remember those posters that said, 'Today is the first day of the rest of your life'? Well, that's true of every day but one...the day you die.",
-                input_quote: "Remember those posters that said, 'Today is the first day of the rest of your life'? Well, that's true of every day but one...the day you die.")
-OriginalQuote.create(author: "Gluteus Maximus",
-                      quote: "Are you not entertained?! Are you not entertained?! Is this not why you are here?",
-                input_quote: "Are you not entertained?! Are you not entertained?! Is this not why you are here?")
-OriginalQuote.create(author: "Princess Leia",
-                      quote: "Help me, Obi-Wan Kenobi, you're my only hope.",
-                input_quote: "Help me, Obi-Wan Kenobi, you're my only hope.")
+                input_quote: "__VERB__ those posters that said, 'Today is the first __NOUN__ of the rest of your life'? Well, that's __ADJECTIVE__ of every day but one...the day you die.")
+# OriginalQuote.create(author: "Gluteus Maximus",
+#                       quote: "Are you not entertained?! Are you not entertained?! Is this not why you are here?",
+#                 input_quote: "Are you not entertained?! Are you not entertained?! Is this not why you are here?")
+# OriginalQuote.create(author: "Princess Leia",
+#                       quote: "Help me, Obi-Wan Kenobi, you're my only hope.",
+#                 input_quote: "__NOUN__ me, Obi-Wan Kenobi, you're my only __VERB__.")
 OriginalQuote.create(author: "Truman Burbank",
                       quote: "Good morning, and in case I don't see you, good afternoon, good evening, and good night!",
-                input_quote: "Good morning, and in case I don't see you, good afternoon, good evening, and good night!")
+                input_quote: "__ADJECTIVE__ morning, and in case I don't __VERB__ you, good afternoon, good evening, and good __NOUN__ !")
 # OriginalQuote.create(author: ,
 #                       quote: ,
 #                 input_quote: )
