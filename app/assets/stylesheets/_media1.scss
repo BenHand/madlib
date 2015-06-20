@@ -1,0 +1,43 @@
+@media screen and (min-width: 700px) {
+
+// QUOTE PREVIEWS ------------------------------------------
+
+.quote-previews {
+	max-width: 1000px;
+}
+
+.sample-quote {
+	@include grid(6);
+	float: left;
+	margin-right: 0;
+	padding: 30px;
+}
+
+.original-quote {
+	@include grid(4);
+	min-height: 280px;
+	float: right;
+	margin-right: 0;
+	overflow: hidden;
+	z-index: 1;
+	background: $blue;
+	padding: 50px;
+}
+
+
+.start {
+	// border-top: 1px solid black;
+	background: $tsgreen;
+	max-width: 1000px;
+	margin: 0 auto;
+	clear: left;
+	float: none;
+	color: white;
+
+	h4 {
+		color: white;
+	}
+}
+
+
+} //end of media query

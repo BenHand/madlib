@@ -64,3 +64,13 @@ $(".login-form").submit(function(e){
 	})
 })
 
+$(".login-button").click(function(){
+	$(".regi-page").hide();
+	$(".login-page").fadeIn(1000);
+
+})
+$(".signup-button").click(function(){
+	$(".login-page").hide();
+	$(".regi-page").fadeIn(1000);
+
+})
