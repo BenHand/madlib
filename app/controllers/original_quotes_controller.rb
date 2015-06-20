@@ -8,7 +8,7 @@ class OriginalQuotesController < ApplicationController
   def show
     quotes = OriginalQuote.all
     @quote = quotes.sample
-    render json: @quote
+    render json: @quote, status: 200
   end
 
 end
