@@ -4,7 +4,6 @@ var RadLibs = React.createClass({
 		
 		return (
 			<div>
-				<button onClick={this.logout}>Logout</button>
 				<section className="create">
 					<div className="newQuotePage">
 						<div className="sample-quote">
@@ -18,7 +17,7 @@ var RadLibs = React.createClass({
 									<p className="newAuth"> -- Author</p>
 								</div>
 							</div>
-						</div>
+						</div> 
 						<div className="original-quote">
 							<div className="center">
 								<h3>Look familiar?</h3>
@@ -26,8 +25,10 @@ var RadLibs = React.createClass({
 								<p className="origAuth"></p>
 							</div>
 						</div>
+						<div className="inspire">
+						</div>
 						<button className="reload" onClick={this.reload}>Create again?</button>
-					</div>
+					</div> 
 					<div className="startQuote">
 						<div className="directions center2">
 							<h3>Enter a noun, verb, and adjective in the boxes below.</h3>
@@ -39,11 +40,14 @@ var RadLibs = React.createClass({
 									<input type="text" className="verb-grab" placeholder='Verb' />
 									<input type="text" className="adj-grab" placeholder='Adjective' />
 									<button className="create-button btn">Submit</button>
-								</form>
+								</form> 
 							</div>
-						</div>
-					</div>            
+						</div> 
+					</div>         
 				</section>
+				<div className="logout-box">
+					<button className="logout-button btn" onClick={this.logout}>Logout</button>
+				</div>
 			</div>
 
 		);
@@ -64,9 +68,8 @@ var RadLibs = React.createClass({
 		newQuote = newQuote.replace(/__VERB__/g, verb);
 		newQuote = newQuote.replace(/__ADJECTIVE__/g, adj);
 		var endQuote = newQuote;
-		$(".startQuote").fadeOut(1000);
+		$(".startQuote").hide();
 		$(".new").html(endQuote);
-		$(".newAuth").html("-- " + newAuthor);
 		$(".origAuth").html("-- " + originalAuthor);
 		$(".new").hide();
 		$(".new").fadeIn(1000);
@@ -77,9 +80,23 @@ var RadLibs = React.createClass({
 		$(".noun-grab").val("");
 		$(".verb-grab").val("");
 		$(".adj-grab").val("");
+		$.get("inspire/show",function(inspi){
+			$(".inspire").html('" ' + inspi.inspire + ' "')
+		})
+		$.post("mad_quotes", {
+			user_id: user.id,
+			original_quote_id: this.props.quote.id,
+			fun_quote: endQuote
+
+		}, "json")
+		setTimeout(750, $.get("mad_quotes", function(madquote){
+			for(var i=0; i < madquote.length; i++){
+				$(".newAuth").html("-- " + madquote[i].fun_author);
+			}
+		}))
 	},
 	reload: function(){
-		$(".newQuotePage").fadeOut(1000);
+		$(".newQuotePage").hide();
 		$(".startQuote").fadeIn(1000);
 		myApp.navigate("");
 		myApp.navigate("radlibs", {trigger: true})

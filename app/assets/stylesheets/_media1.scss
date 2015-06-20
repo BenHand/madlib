@@ -48,5 +48,10 @@
 	}
 }
 
+.word-input .create-button {
+	background: $green;
+	@include gradient($ltgreen, $green);
+}
+
 
 } //end of media query

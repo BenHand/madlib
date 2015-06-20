@@ -168,11 +168,16 @@ form input {
 	display: block;
 }
 
-.login-button, .signup-button {
+.login-button, .signup-button, .logout-button {
 	background: $pink;
 	@include gradient ($ltpink, $pink);
 	font-size: 16px;
 	font-size: 1rem;
+}
+
+.logout-button {
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .login-page{
@@ -243,6 +248,17 @@ form input {
 
 .startQuote {
 	background: $blue;
+}
+
+// LOGOUT -----------------------------------------
+
+.logout-box {
+	background: $yellow;
+	text-align: right;
+
+	button {
+		margin: 20px;
+	}
 }
 
 // FOOTER ------------------------------------------
