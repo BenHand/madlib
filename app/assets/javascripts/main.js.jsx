@@ -3,14 +3,10 @@ var App = Backbone.Router.extend({
 				'': 'home',
 				'login': 'login',
 				"profile/:user":    "profile",
-				"radlibs":          "radlibs" ,
-				"resultpage": 		"resultpage"     
+				"radlibs":          "radlibs"     
 		},
 		home: function() {
 			React.render(<Home/>, document.querySelector('#container'));
-		},
-		login: function() {
-			React.render(<Edit/>, document.querySelector('#container'));
 		},
 		profile: function(user) {
 			React.render(<Profile user={user}/>, document.querySelector('#container'));
@@ -18,12 +14,8 @@ var App = Backbone.Router.extend({
 		radlibs: function() {
 			$.get("original_quotes/show", function(quote){
 				React.render(<RadLibs quote={quote}/>, document.querySelector('#container'));
-
 			})
-		},
-		resultpage: function() {
-			React.render(<RadlibResult/>, document.querySelector('#container'));
-		},
+		}
 });
 
 var myApp = new App();
@@ -40,7 +32,6 @@ $(".registration-form").submit(function(e){
 		password_confirmation: $(".password-conf-reg").val(),
 		email: $(".email-reg").val()
 	});
-		console.log(newUser);
 		newUser.save();
 });
 $(".login-form").submit(function(e){
