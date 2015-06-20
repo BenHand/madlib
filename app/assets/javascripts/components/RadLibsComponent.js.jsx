@@ -70,7 +70,6 @@ var RadLibs = React.createClass({
 		var endQuote = newQuote;
 		$(".startQuote").hide();
 		$(".new").html(endQuote);
-		$(".newAuth").html("-- " + newAuthor);
 		$(".origAuth").html("-- " + originalAuthor);
 		$(".new").hide();
 		$(".new").fadeIn(1000);
@@ -84,6 +83,17 @@ var RadLibs = React.createClass({
 		$.get("inspire/show",function(inspi){
 			$(".inspire").html('" ' + inspi.inspire + ' "')
 		})
+		$.post("mad_quotes", {
+			user_id: user.id,
+			original_quote_id: this.props.quote.id,
+			fun_quote: endQuote
+
+		}, "json")
+		setTimeout(750, $.get("mad_quotes", function(madquote){
+			for(var i=0; i < madquote.length; i++){
+				$(".newAuth").html("-- " + madquote[i].fun_author);
+			}
+		}))
 	},
 	reload: function(){
 		$(".newQuotePage").hide();
