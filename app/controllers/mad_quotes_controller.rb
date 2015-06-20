@@ -13,8 +13,9 @@ class MadQuotesController < ApplicationController
     original    = OriginalQuote.find(params[:original_quote_id])
     author_name = original.author.split(" ")
     user_name   = user.name.split(" ")
+    fun_quote   = params[:fun_quote].gsub(/<[^>]*>/, "")
     fun_author  = (user_name[0] + " " + author_name[1]).titleize
-    mad_quote   = MadQuote.create(fun_quote: params[:fun_quote],
+    mad_quote   = MadQuote.create(fun_quote: fun_quote,
                                  fun_author: fun_author,
                                     user_id: user.id,
                           original_quote_id: original.id)

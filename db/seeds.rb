@@ -79,7 +79,7 @@ OriginalQuote.create(author: "Lester Burnham",
                 input_quote: "__VERB__ those posters that said, 'Today is the first __NOUN__ of the rest of your life'? Well, that's __ADJECTIVE__ of every day but one...the day you die.")
 OriginalQuote.create(author: "Gluteus Maximus",
                       quote: "Are you not entertained?! Are you not entertained?! Is this not why you are here?",
-                input_quote: "Are you not __VERB__?! Are you not entertained?! Is this not why you are __NOUN__?")
+                input_quote: "Are you not __VERB__?! Are you not __VERB__?! Is this not why you are __NOUN__?")
 OriginalQuote.create(author: "Princess Leia",
                       quote: "Help me, Obi-Wan Kenobi, you're my only hope.",
                 input_quote: "__NOUN__ me, Obi-Wan Kenobi, you're my only __VERB__.")
@@ -160,6 +160,14 @@ Inspiration.create(inspire: "The measure of who we are is what we do with what w
 Inspiration.create(inspire: "If you can dream it, you can do it.")
 Inspiration.create(inspire: "Nobody’s a natural. You work hard to get good and then work to get better. It’s hard to stay on top.")
 Inspiration.create(inspire: "The difference between ordinary and extraordinary is that little extra.")
-
+Inspiration.create(inspire: "Who's awesome? You're awesome!")
+Inspiration.create(inspire: "Look past the exterior, and see that there is so much more within. Then decide to unleash that potential to the fullest.")
+Inspiration.create(inspire: "What the mind can conceive and believe, it can achieve.")
+Inspiration.create(inspire: "Don’t be discouraged. It’s often the last key in the bunch that opens the lock.")
+Inspiration.create(inspire: "How long should you try? Until.")
+Inspiration.create(inspire: "If at first you don't succeed, try, try again.")
+Inspiration.create(inspire: "Never think about the mistakes you've made. Think about the mistakes you will make.")
+Inspiration.create(inspire: "Every artist was first an amateur.")
+Inspiration.create(inspire: "Nothing is impossible, the word itself says 'I'm possible!'")
 User.create(name: 'ben', email: 'ben@ben.com', password: 'benspw', password_confirmation: 'benspw')
 
