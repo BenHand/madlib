@@ -32,6 +32,8 @@ $(".registration-form").submit(function(e){
 		password_confirmation: $(".password-conf-reg").val(),
 		email: $(".email-reg").val()
 	});
+		$(".regi-page").hide();
+		$(".login-page").fadeIn(1000);
 		newUser.save();
 });
 $(".login-form").submit(function(e){
