@@ -2,7 +2,7 @@ var Login = React.createClass({
 	render: function () {
 		return (
 			<div>
-				<div className="center logi-page">
+				<div className="center login-page">
 					<h2>Author your own!</h2>
 					<div className="wrapper">
 						<div className="login">

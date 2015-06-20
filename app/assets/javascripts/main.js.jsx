@@ -66,11 +66,11 @@ $(".login-form").submit(function(e){
 
 $(".login-button").click(function(){
 	$(".regi-page").hide();
-	$(".logi-page").fadeIn(1000);
+	$(".login-page").fadeIn(1000);
 
 })
 $(".signup-button").click(function(){
-	$(".logi-page").hide();
+	$(".login-page").hide();
 	$(".regi-page").fadeIn(1000);
 
 })
