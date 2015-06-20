@@ -1,40 +1,42 @@
 OriginalQuote.create(author: 'Albert Einstein',
                       quote: 'Learn from yesterday, live for today, hope for tomorrow.
                                The important thing is not to stop questioning.',
-                input_quote: 'Learn from __NOUN__, live for today, hope for __VERB__. The important thing is not to stop __ADJECTIVE__.')
+                input_quote: 'Learn from __NOUN__, live for today, __VERB__ for tomorrow. The __ADJECTIVE__ thing is not to stop questioning.')
 OriginalQuote.create(author: "Jaden Smith",
                       quote: "School Is The Tool To Brainwash The Youth.",
-                input_quote: "School Is The Tool To Brainwash The Youth.")
+                input_quote: "__NOUN__ Is The Tool To __VERB__ The __NOUN__.") 
 OriginalQuote.create(author: "Oscar Gamble",
                       quote: "They don't think it be like it is, but it do",
-                input_quote: "They don't think it be like it is, but it do")
+                input_quote: "__NOUN__ don't __VERB__ it be like it is, but it __VERB__")
 OriginalQuote.create(author: "Michelle Bachmann",
                       quote: "President Obama can't wait to get Americans addicted to the crack cocaine of dependency.",
-                input_quote: "President Obama can't wait to get Americans addicted to the crack cocaine of dependency.")
+                input_quote: "President __NOUN__ can't __VERB__ to get Americans addicted to the __ADJECTIVE__ cocaine of dependency.")
 OriginalQuote.create(author: "Captain Nemo",
                       quote: "I shall call him Squishy. And he shall be mine. And he shall be MY Squishy.",
-                input_quote: "I shall call him Squishy. And he shall be mine. And he shall be MY Squishy.")
+                input_quote: "I shall __VERB__ him Squishy. And __NOUN__ shall be mine. And he shall be MY __NOUN__.")
 OriginalQuote.create(author: "Han Solo",
                       quote: "Hokey religions and ancient weapons are no match for a good blaster by your side, kid.",
-                input_quote: "Hokey religions and ancient weapons are no match for a good blaster by your side, kid.")
+                input_quote: "Hokey __NOUN__ and __NOUN__ weapons are no match for a __ADJECTIVE__ blaster by your side, kid.")
 OriginalQuote.create(author: "Jimmie Dimmick",
                       quote: "Now, you've got a corpse in a car, minus a head, in a garage. Take me to it.",
-                input_quote: "Now, you've got a corpse in a car, minus a head, in a garage. Take me to it.")
+                input_quote: "Now, you've got a __NOUN__ in a car, minus a __NOUN__, in a __NOUN__. Take me to it.")
 OriginalQuote.create(author: "Bull Durham",
                       quote: "Sometimes you win, sometimes you lose, and sometimes it rains.",
-                input_quote: "Sometimes you win, sometimes you lose, and sometimes it rains.")
+                input_quote: "Sometimes __NOUN__ win, sometimes you __VERB__, and sometimes __NOUN__ rains.")
 OriginalQuote.create(author: "Ron Burgandy",
                       quote: "They've done studies, you know. Sixty percent of the time, it works every time.",
-                input_quote: "They've done studies, you know. Sixty percent of the time, it works every time.")
+                input_quote: "They've done __NOUN__, you know. __ADJECTIVE__ percent of the time, it works every time.")
 OriginalQuote.create(author: "Andy Dufresne",
                       quote: "Hope is a good thing, maybe the best of things, and no good thing ever dies.",
-                input_quote: "Hope is a good thing, maybe the best of things, and no good thing ever dies.")
+                input_quote: "__NOUN__ is a good thing, maybe the __NOUN__ of things, and no __ADJECTIVE__ thing ever dies.")
 OriginalQuote.create(author: "Peaches Monroe",
                       quote: "We in dis bitch, finna get crunk, eyebrows on fleek, dafuq.",
-                input_quote: "We in dis bitch, finna get crunk, eyebrows on fleek, dafuq.")
+                input_quote: "We in dis __NOUN__, finna get crunk, __NOUN__ on fleek, __ADJECTIVE__.")
 OriginalQuote.create(author: "Bob Marley",
                       quote: "Truth is, everybody is going to hurt you; you just gotta find the ones worth suffering for.",
-                input_quote: "Truth is, everybody is going to hurt you; you just gotta find the ones worth suffering for.")
+                input_quote: "Truth is, __NOUN__ is going to __VERB__ you; you just gotta find the __NOUN__ worth suffering for.")
+
+
 OriginalQuote.create(author: "Bill Gates",
                       quote: "We all need people who will give us feedback. That's how we improve.",
                 input_quote: "We all need people who will give us feedback. That's how we improve.")
