@@ -1,0 +1,28 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+} 
+
+$one-fifth: 20%;
+$two-fifths: 40%;
+$three-fifths: 60%;
+$four-fifths: 80%;
+$full: 100%;
+
+$six-tenths: 60%;
+
+$gut: 2%;
+$col: 8.2%;
+
+@mixin grid($num-cols) {
+	width: ($col * $num-cols) + ($gut * (($num-cols) - 1));
+	margin-right: $gut;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	float: left;
+	background: white;
+}
+

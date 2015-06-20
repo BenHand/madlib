@@ -1,0 +1,180 @@
+// HEADER ------------------------------------------
+
+header {
+	width: 100%;
+	background: $black;
+	overflow: hidden;
+}
+
+// QUOTE PREVIEWS ------------------------------------------
+
+.quote-previews {
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.sample-quote {
+	@include grid(10);
+	background: white;
+	padding: 20px;
+
+	h3, p {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	h3 {
+		padding-top: 40px;
+	}
+
+	p {
+		padding-top: 20px;
+	}
+
+}
+
+.original-quote {
+	@include grid(10);
+	background: $blue;
+	color: white;
+	padding: 40px;
+
+	h3, p {
+		font-weight: 200;
+	}
+
+	h3:nth-of-type(2) {
+		font-style: italic;
+	}
+}
+
+.center {
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+// COLOR BOX ------------------------------------------
+
+$box-height: 200px;
+$box-width: 90%;
+
+.color-box {
+	min-height: 200px;
+	width: $box-width;
+	max-width: 350px;
+	margin: 10px auto;
+	position: relative;
+    
+  	.top {
+	    width: 100%;
+	    height: 30px;
+	    background: $tyellow;
+	    border-radius: 0 0 30px 30px;
+	    position: absolute;
+	    top: 0;
+  	}
+  
+  	.right {
+	    width: 30px;
+	    height: 100%;
+	    background: $tpink;
+	    border-radius: 30px 0 0 30px;
+	    position: absolute;
+	    right: 0;
+  	}
+  
+  	.bottom {
+	    width: 100%;
+	    height: 30px;
+	    background: $tblue;
+	    border-radius: 30px 30px 0 0;
+	    position: absolute;
+	    bottom: 0;
+  	}
+  
+  	.left {
+	    width: 30px;
+	    height: 100%;
+	    background: $tgreen;
+	    border-radius: 0 30px 30px 0;
+	    position: absolute;
+	    left: 0;
+  	}
+  
+} // end .color-box
+
+// START SECTION -------------------------------------
+
+.start {
+	overflow: hidden;
+	@include grid(10);
+	label {
+		display: block;
+		padding-top: 10px;
+	}
+}
+
+.wrapper {
+	h4 {
+		padding: 20px 10px 20px 0;
+		display: inline-block;
+	}
+
+	label {
+		display: inline-block;
+	}
+}
+
+.btn {
+	color: white;
+	text-align: center;
+	border: 0;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.create-button {
+	background: $blue;
+	font-size: 18px;
+	font-size: 1.125rem;
+	display: block;
+}
+
+.login-button, .signup-button {
+	background: $pink;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+// CREATE SECTION -------------------------------------
+
+.create {
+	@include grid(10);
+	overflow: hidden;
+}
+
+.directions {
+	background: $blue;
+	color: white;
+	padding: 40px;
+}
+
+.word-input label {
+	display: block;
+}
+
+// FOOTER ------------------------------------------
+
+footer {
+	width: 100%;
+	background: $black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	clear: left;
+
+	p {
+		text-align: center;
+	}
+}
+
