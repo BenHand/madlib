@@ -4,7 +4,6 @@ var RadLibs = React.createClass({
 		
 		return (
 			<div>
-				<button onClick={this.logout}>Logout</button>
 				<section className="create">
 					<div className="newQuotePage">
 						<div className="sample-quote">
@@ -18,7 +17,7 @@ var RadLibs = React.createClass({
 									<p className="newAuth"> -- Author</p>
 								</div>
 							</div>
-						</div>
+						</div> 
 						<div className="original-quote">
 							<div className="center">
 								<h3>Look familiar?</h3>
@@ -27,7 +26,7 @@ var RadLibs = React.createClass({
 							</div>
 						</div>
 						<button className="reload" onClick={this.reload}>Create again?</button>
-					</div>
+					</div> 
 					<div className="startQuote">
 						<div className="directions center2">
 							<h3>Enter a noun, verb, and adjective in the boxes below.</h3>
@@ -39,11 +38,14 @@ var RadLibs = React.createClass({
 									<input type="text" className="verb-grab" placeholder='Verb' />
 									<input type="text" className="adj-grab" placeholder='Adjective' />
 									<button className="create-button btn">Submit</button>
-								</form>
+								</form> 
 							</div>
-						</div>
-					</div>            
+						</div> 
+					</div>         
 				</section>
+				<div className="logout-box">
+					<button className="logout-button btn" onClick={this.logout}>Logout</button>
+				</div>
 			</div>
 
 		);
