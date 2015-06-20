@@ -26,7 +26,6 @@
 
 
 .start {
-	// border-top: 1px solid black;
 	background: $tsgreen;
 	max-width: 1000px;
 	margin: 0 auto;
@@ -36,6 +35,16 @@
 
 	h4 {
 		color: white;
+	}
+}
+
+.create-button {
+	background: $blue;
+	@include gradient($ltblue, $blue);
+
+	&:hover {
+		background: $pink;
+		@include gradient($pink, $ltpink);
 	}
 }
 
