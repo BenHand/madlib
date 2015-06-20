@@ -25,6 +25,8 @@ var RadLibs = React.createClass({
 								<p className="origAuth"></p>
 							</div>
 						</div>
+						<div className="inspire">
+						</div>
 						<button className="reload" onClick={this.reload}>Create again?</button>
 					</div> 
 					<div className="startQuote">
@@ -80,8 +82,8 @@ var RadLibs = React.createClass({
 		$(".verb-grab").val("");
 		$(".adj-grab").val("");
 		$.get("inspire/show",function(inspi){
-			console.log(inspi.inspire)
-	})
+			$(".inspire").html('" ' + inspi.inspire + ' "')
+		})
 	},
 	reload: function(){
 		$(".newQuotePage").hide();
