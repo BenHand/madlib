@@ -4,7 +4,7 @@ OriginalQuote.create(author: 'Albert Einstein',
                 input_quote: 'Learn from __NOUN__, live for today, __VERB__ for tomorrow. The __ADJECTIVE__ thing is not to stop questioning.')
 OriginalQuote.create(author: "Jaden Smith",
                       quote: "School Is The Tool To Brainwash The Youth.",
-                input_quote: "__NOUN__ Is The Tool To __VERB__ The __NOUN__.") 
+                input_quote: "__NOUN__ Is The Tool To __VERB__ The __NOUN__.")
 OriginalQuote.create(author: "Oscar Gamble",
                       quote: "They don't think it be like it is, but it do",
                 input_quote: "__NOUN__ don't __VERB__ it be like it is, but it __VERB__")
@@ -35,8 +35,6 @@ OriginalQuote.create(author: "Peaches Monroe",
 OriginalQuote.create(author: "Bob Marley",
                       quote: "Truth is, everybody is going to hurt you; you just gotta find the ones worth suffering for.",
                 input_quote: "Truth is, __NOUN__ is going to __VERB__ you; you just gotta find the __NOUN__ worth suffering for.")
-
-
 OriginalQuote.create(author: "Bill Gates",
                       quote: "We all need people who will give us feedback. That's how we improve.",
                 input_quote: "We all need __NOUN__ who will give us feedback. That's __ADJECTIVE__ we improve.")
