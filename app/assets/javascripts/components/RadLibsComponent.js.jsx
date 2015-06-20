@@ -66,7 +66,7 @@ var RadLibs = React.createClass({
 		newQuote = newQuote.replace(/__VERB__/g, verb);
 		newQuote = newQuote.replace(/__ADJECTIVE__/g, adj);
 		var endQuote = newQuote;
-		$(".startQuote").fadeOut(1000);
+		$(".startQuote").hide();
 		$(".new").html(endQuote);
 		$(".newAuth").html("-- " + newAuthor);
 		$(".origAuth").html("-- " + originalAuthor);
@@ -79,9 +79,12 @@ var RadLibs = React.createClass({
 		$(".noun-grab").val("");
 		$(".verb-grab").val("");
 		$(".adj-grab").val("");
+		$.get("inspire/show",function(inspi){
+			console.log(inspi.inspire)
+	})
 	},
 	reload: function(){
-		$(".newQuotePage").fadeOut(1000);
+		$(".newQuotePage").hide();
 		$(".startQuote").fadeIn(1000);
 		myApp.navigate("");
 		myApp.navigate("radlibs", {trigger: true})
