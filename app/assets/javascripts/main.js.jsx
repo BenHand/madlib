@@ -3,7 +3,8 @@ var App = Backbone.Router.extend({
 				'': 'home',
 				'login': 'login',
 				"profile/:user":    "profile",
-				"radlibs":          "radlibs"      
+				"radlibs":          "radlibs" ,
+				"resultpage": 		"resultpage"     
 		},
 		home: function() {
 			React.render(<Home/>, document.querySelector('#container'));
@@ -15,20 +16,22 @@ var App = Backbone.Router.extend({
 			React.render(<Profile user={user}/>, document.querySelector('#container'));
 		},
 		radlibs: function() {
-			React.render(<Radlibs/>, document.querySelector('#container'));
-		}
+			$.get("original_quotes/show", function(quote){
+				React.render(<RadLibs quote={quote}/>, document.querySelector('#container'));
+
+			})
+		},
+		resultpage: function() {
+			React.render(<RadlibResult/>, document.querySelector('#container'));
+		},
 });
 
 var myApp = new App();
 Backbone.history.start();
 myApp.navigate('');
 
-var origQuote = new OriginalQuoteCollection();
 var user = null;
-// var users = new UserCollection();
-// users.fetch({success: function(){
-// 	console.log(users.at(0).get("name"))
-// }});
+
 $(".registration-form").submit(function(e){
 	e.preventDefault();
 	var newUser = new UserModel({
@@ -38,12 +41,12 @@ $(".registration-form").submit(function(e){
 		email: $(".email-reg").val()
 	});
 		console.log(newUser);
-		users.add(newUser);
 		newUser.save();
 });
 $(".login-form").submit(function(e){
+	e.preventDefault();
 	$.post(
-		"/session/create",
+		"/sessions/create",
 		{
 			email: $(".email-log").val(),
 			password: $(".password-log").val()
@@ -52,7 +55,8 @@ $(".login-form").submit(function(e){
 	)
 	.success(function(u){
 		user = u
-		myApp.navigate("rablibs", {trigger: true})
+		myApp.navigate("radlibs", {trigger: true})
+		console.log(user);
 	})
 	.error(function(errorMsg){
 		alert("Please enter a valid name and password!")
