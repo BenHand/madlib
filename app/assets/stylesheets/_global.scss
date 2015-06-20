@@ -53,6 +53,11 @@ header {
 	margin: 0 auto;
 }
 
+.center2 {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
 // COLOR BOX ------------------------------------------
 
 $box-height: 200px;
@@ -131,7 +136,7 @@ form input {
 	width: 100%;
 	border-radius: 5px;
 	font-size: 16px;
-	margin: 14px;
+	font-size: 1rem;
 	margin: 0.875rem;
 	padding: 0.5rem;
 }
@@ -179,16 +184,65 @@ form input {
 .create {
 	@include grid(10);
 	overflow: hidden;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .directions {
 	background: $blue;
 	color: white;
 	padding: 40px;
+
+	h3 {
+		font-weight: 200;
+	}
 }
 
-.word-input label {
-	display: block;
+.newQuotePage {
+	display:none;
+}
+
+.word-input {
+	padding: 40px;
+	background: white;
+	width: 10
+
+	label {
+		display: block;
+	}
+
+	input {
+		color: $black;
+		border-radius: 5px;
+		width: 100%;
+		height: 50px;
+		font-size: 16px;
+		font-size: 1rem;
+
+		&:nth-of-type(1) {
+		border: 2px solid $green;
+		}
+		
+		&:nth-of-type(2) {
+			border: 2px solid $pink;
+		}
+
+		&:nth-of-type(3) {
+			border: 2px solid $blue;
+		}
+	}
+
+	.btn:hover {
+		@include gradient($ltpink, $pink);
+	}
+}
+
+.white-background {
+	background: white;
+}
+
+.startQuote {
+	background: $blue;
 }
 
 // FOOTER ------------------------------------------
@@ -206,19 +260,3 @@ footer {
 	}
 }
 
-.newQuotePage{
-	display:none;
-}
-.startQuote{
-		input{
-		color:black;
-		border-style:solid;
-		border-color:black;
-		border-width:2px;
-		border-radius:5px;
-		margin:3px;
-		width:200px;
-		height:50px;
-		font-size: 20px;
-	}
-}

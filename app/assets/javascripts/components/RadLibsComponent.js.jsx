@@ -28,22 +28,18 @@ var RadLibs = React.createClass({
 						<button className="reload" onClick={this.reload}>Create again?</button>
 					</div>
 					<div className="startQuote">
-						<div className="directions">
-							<h3>Enter your word(s) for each space.</h3>
+						<div className="directions center2">
+							<h3>Enter a noun, verb, and adjective in the boxes below.</h3>
 						</div>
-						<div className="word-input center">
-						<form onSubmit={this.libSubmit}>
-							<div>
-								<input type="text" className="noun-grab" placeholder='Noun' />
+						<div className="white-background">
+							<div className="word-input center2">
+								<form onSubmit={this.libSubmit}>
+									<input type="text" className="noun-grab" placeholder='Noun' />
+									<input type="text" className="verb-grab" placeholder='Verb' />
+									<input type="text" className="adj-grab" placeholder='Adjective' />
+									<button className="create-button btn">Submit</button>
+								</form>
 							</div>
-							<div>
-								<input type="text" className="verb-grab" placeholder='Verb' />
-							</div>
-							<div>
-								<input type="text" className="adj-grab" placeholder='Adjective' />
-							</div>
-							<button>Submit</button>
-						</form>
 						</div>
 					</div>            
 				</section>
