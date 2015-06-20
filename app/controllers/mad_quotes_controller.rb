@@ -9,11 +9,17 @@ class MadQuotesController < ApplicationController
   end
 
   def create
-    original   = OriginalQuote.find(params[:id])
-    fun_author = User.find(id: session[:user_id]).name
-    MadQuote.create(fun_quote: params[:fun_quote], fun_author: fun_author,
-                      user_id: sesssion[:user_id],
-            original_quote_id: original.id)
+    user        = User.find(params[:user_id])
+    original    = OriginalQuote.find(params[:original_quote_id])
+    author_name = original.author.split(" ")
+    user_name   = user.name.split(" ")
+    fun_author  = (user_name[0] + " " + author_name[1]).titleize
+    mad_quote   = MadQuote.create(fun_quote: params[:fun_quote],
+                                 fun_author: fun_author,
+                                    user_id: user.id,
+                          original_quote_id: original.id)
+
+    render json: mad_quote, status: 200
   end
 
 end
