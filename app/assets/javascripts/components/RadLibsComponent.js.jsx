@@ -13,7 +13,15 @@ var RadLibs = React.createClass({
 				{user.name}
 				</div>
 				<form className="changeMe" onSubmit={this.libSubmit}>
-					<div dangerouslySetInnerHTML={{__html: replacedHtml}} />
+					<div>
+						<input type="text" className="noun-grab" placeholder='Noun' />
+					</div>
+					<div>
+						<input type="text" className="verb-grab" placeholder='Verb' />
+					</div>
+					<div>
+						<input type="text" className="adj-grab" placeholder='Adjective' />
+					</div>
 					<button>Submit</button>
 				</form>
 				<div className="new">
@@ -34,19 +42,15 @@ var RadLibs = React.createClass({
 		noun = noun[0].value
 		verb = verb[0].value
 		adj = adj[0].value
-		console.log("woooo")
-		console.log(noun)
-		console.log(verb)
-		console.log(adj)
 		newQuote = changedInput.replace(/__NOUN__/g, noun)
 		newQuote = newQuote.replace(/__VERB__/g, verb)
 		newQuote = newQuote.replace(/__ADJECTIVE__/g, adj)
 		console.log(newQuote);
 		$(".changeMe").fadeOut(1000)
-		$(".new").append(newQuote)
+		$(".new").html(newQuote)
 		$(".new").hide()
 		$(".new").fadeIn(1000);
-		$(".orig").append(Origquote)
+		$(".orig").html(Origquote)
 		$(".orig").hide()
 		$(".orig").fadeIn(1000);
 	}
