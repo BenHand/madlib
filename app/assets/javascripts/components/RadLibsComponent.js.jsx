@@ -31,8 +31,6 @@ var RadLibs = React.createClass({
 					<div className="startQuote">
 						<div className="directions center2">
 							<h3>Enter a noun, verb, and adjective in the boxes below.</h3>
-						<div className="directions">
-							<h3>Enter a word for each space.</h3>
 						</div>
 						<div className="white-background">
 							<div className="word-input center2">
