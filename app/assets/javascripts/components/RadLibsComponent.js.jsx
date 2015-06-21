@@ -6,7 +6,7 @@ var RadLibs = React.createClass({
 			<div>
 				<section className="create">
 					<div className="newQuotePage">
-						<div className="sample-quote">
+						<div className="fun-quote">
 							<div className="color-box">
 								<div className="top"></div>
 								<div className="right"></div>
@@ -42,10 +42,12 @@ var RadLibs = React.createClass({
 						</div> 
 					</div>         
 				</section>
-					<div className="inspire-box center">
-						<div className="inspire">
+					<div className="inspire-background">
+						<div className="inspire-box">
+							<div className="inspire center">
+							</div>
+							<button className="reload create-button btn center" onClick={this.reload}>Create again?!</button>
 						</div>
-						<button className="reload create-button btn" onClick={this.reload}>Create again?!</button>
 					</div>
 				<div className="logout-box">
 					<button className="logout-button btn" onClick={this.logout}>Logout</button>

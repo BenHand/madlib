@@ -6,7 +6,7 @@
 	max-width: 1000px;
 }
 
-.sample-quote {
+.fun-quote {
 	@include grid(6);
 	float: left;
 	margin-right: 0;
@@ -39,6 +39,19 @@
 	}
 }
 
+form input {
+
+	&:focus {
+		@include shadow($blue);
+	}
+}
+
+.create {
+	max-width: 1000px;
+	margin: 0 auto;
+	float: none;
+}
+
 .create-button {
 	background: $blue;
 	@include gradient($ltblue, $blue);
@@ -52,6 +65,34 @@
 .word-input .create-button {
 	background: $green;
 	@include gradient($ltgreen, $green);
+}
+
+// CREATE AGAIN/INSPIRE -----------------------------------------
+
+.inspire-background {
+	background: white;
+	clear: both;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.inspire-box {
+	background: $green;
+	padding: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	width: 60%;
+	margin: 0 auto;
+
+	.inspire {
+		padding-bottom: 20px;
+		font-size: 18px;
+		font-size: 1.125rem;
+		color: white;
+
+	}	
 }
 
 

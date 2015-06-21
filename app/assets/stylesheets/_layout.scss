@@ -36,3 +36,8 @@ $col: 8.2%;
 	background-image: 		  linear-gradient(to bottom, $top, $bottom);
 }
 
+@mixin shadow($shadow) {
+	-webkit-box-shadow: 0 0 15px $shadow;
+	-moz-box-shadow:    0 0 15px $shadow;
+	box-shadow:         0 0 15px $shadow;
+}
