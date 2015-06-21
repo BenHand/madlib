@@ -19,16 +19,16 @@ var Home = React.createClass({
 							<div className="bottom"></div>
 							<div className="left"></div>
 							<div className="center">
-								<h3 className="funQ">"Say <span className="noun">boy</span> to my little <span className="noun">farm</span>!"</h3>
-								<p className="funA"> —Carissa Montana</p>
+								<h3 className="funQ"></h3>
+								<p className="funA"></p>
 							</div>
 						</div>
 					</div>
 					<div className="original-quote">
 						<div className="center">
 							<h3>Look familiar?</h3>
-							<h3 className="oriQ">“Say hello to my little friend!”</h3>
-							<p className="oriA">— Tony Montana</p>
+							<h3 className="oriQ"></h3>
+							<p className="oriA"></p>
 						</div>
 					</div>
 				</section>
