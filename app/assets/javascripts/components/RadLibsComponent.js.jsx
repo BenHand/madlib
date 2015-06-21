@@ -6,7 +6,7 @@ var RadLibs = React.createClass({
 			<div>
 				<section className="create">
 					<div className="newQuotePage">
-						<div className="sample-quote">
+						<div className="fun-quote">
 							<div className="color-box">
 								<div className="top"></div>
 								<div className="right"></div>

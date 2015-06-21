@@ -6,7 +6,7 @@
 	max-width: 1000px;
 }
 
-.sample-quote {
+.fun-quote {
 	@include grid(6);
 	float: left;
 	margin-right: 0;
@@ -36,6 +36,13 @@
 
 	h4 {
 		color: white;
+	}
+}
+
+form input {
+
+	&:focus {
+		@include shadow($blue);
 	}
 }
 

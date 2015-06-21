@@ -3,7 +3,7 @@ var Home = React.createClass({
 		return (
 			<div>
 				<section className="quote-previews">
-					<div className="sample-quote">
+					<div className="fun-quote">
 						<div className="color-box">
 							<div className="top"></div>
 							<div className="right"></div>
