@@ -1,6 +1,10 @@
 var RadLibs = React.createClass({
 	render: function () {
 		var newQuote = null
+		var Origquote = null
+		var changedInput = null
+		var originalAuthor = null
+		var newAuthor = null
 		
 		return (
 			<div>
@@ -61,13 +65,13 @@ var RadLibs = React.createClass({
 		var noun = $(".noun-grab");
 		var verb = $(".verb-grab");
 		var adj = $(".adj-grab");
-		var Origquote = this.props.quote.quote;
-		var changedInput = this.props.quote.input_quote;
-		var originalAuthor = this.props.quote.author;
-		var newAuthor = user.name
 		noun = "<span class='noun'>" + noun[0].value + "</span>";
 		verb = "<span class='verb'>" + verb[0].value + "</span>";
 		adj = "<span class='adjective'>" + adj[0].value + "</span>";
+		Origquote = this.props.quote.quote;
+		changedInput = this.props.quote.input_quote;
+		originalAuthor = this.props.quote.author;
+		newAuthor = user.name
 		newQuote = changedInput.replace(/__NOUN__/g, noun);
 		newQuote = newQuote.replace(/__VERB__/g, verb);
 		newQuote = newQuote.replace(/__ADJECTIVE__/g, adj);
