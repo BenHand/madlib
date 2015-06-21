@@ -115,6 +115,7 @@ $box-width: 90%;
 	overflow: hidden;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	transition: background ease 1s;
 	@include grid(10);
 	label {
 		display: block;
