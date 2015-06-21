@@ -15,10 +15,10 @@ var Registration = React.createClass({
                                 <input type="text" className="email-reg" placeholder="Email"/>
                                 </div>
                                 <div>
-                                <input type="text" className="password-reg" placeholder="Password"/>
+                                <input type="password" className="password-reg" placeholder="Password"/>
                                 </div>
                                 <div>
-                                <input type="text" className="password-conf-reg" placeholder="Password"/>
+                                <input type="password" className="password-conf-reg" placeholder="Password"/>
                                 </div>
                                 <button className="create-button btn">Register</button>
                             </form>
