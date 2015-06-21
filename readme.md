@@ -178,4 +178,6 @@
         ├── javascripts
         └── stylesheets
 ```
+
+## Final UML
 ![Alt text](app/assets/images/UML/finalUML.png?raw=true "Final UML")
