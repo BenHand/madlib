@@ -106,8 +106,18 @@ var RadLibs = React.createClass({
  		myApp.navigate("", {trigger: true})
 		$(".regi-page").hide();
 		$(".login-page").fadeIn(1000);
-		$(".signup-button").hide();
-		$(".hide-me-relog").hide();
+		$(".registration-form").submit(function(e){
+			e.preventDefault();
+			var newUser = new UserModel({
+				name: $(".name-reg").val(),
+				password: $(".password-reg").val(),
+				password_confirmation: $(".password-conf-reg").val(),
+				email: $(".email-reg").val()
+			});
+				$(".regi-page").hide();
+				$(".login-page").fadeIn(1000);
+				newUser.save();
+		});
 		$(".login-form").submit(function(e){
 			e.preventDefault();
 			$.post(
@@ -127,6 +137,17 @@ var RadLibs = React.createClass({
 				alert("Please enter a valid name and password!")
 
 			})
+		})
+
+		$(".login-button").click(function(){
+			$(".regi-page").hide();
+			$(".login-page").fadeIn(1000);
+
+		})
+		$(".signup-button").click(function(){
+			$(".login-page").hide();
+			$(".regi-page").fadeIn(1000);
+
 		})
 	}
 });
