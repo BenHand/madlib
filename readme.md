@@ -23,6 +23,15 @@
  *  In the browser go to localhost:3000
  *  Create an Account/Login and start enjoying
 
+### Final UML
+![Alt text](app/assets/images/UML/finalUML.png?raw=true "Final UML")
+
+### Style Tile v2
+![Alt text](app/assets/images/style_tiles/style_tile_radlibs_v2.psd?raw=true "Style Tile")
+
+```
+```
+
 ### Directory Tree
 
 ```
@@ -178,6 +187,3 @@
         ├── javascripts
         └── stylesheets
 ```
-
-## Final UML
-![Alt text](app/assets/images/UML/finalUML.png?raw=true "Final UML")
