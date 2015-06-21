@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   validates_presence_of :name, :email,
                         :password,
-                        :password_confirmation
+                        :password_confirmation, :on => :create
 
   validates_uniqueness_of :email
 

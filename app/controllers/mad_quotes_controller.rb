@@ -10,6 +10,8 @@ class MadQuotesController < ApplicationController
 
   def create
     user        = User.find(params[:user_id])
+    user.quote_count += 1
+    user.save
     original    = OriginalQuote.find(params[:original_quote_id])
     author_name = original.author.split(" ")
     user_name   = user.name.split(" ")
