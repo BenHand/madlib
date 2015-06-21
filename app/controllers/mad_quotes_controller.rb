@@ -28,7 +28,8 @@ class MadQuotesController < ApplicationController
     mad_quote   = MadQuote.create(fun_quote: fun_quote,
                                  fun_author: fun_author,
                                     user_id: user.id,
-                          original_quote_id: original.id)
+                          original_quote_id: original.id,
+                                 span_quote: params[:fun_quote])
 
     render json: mad_quote, status: 200
   end
