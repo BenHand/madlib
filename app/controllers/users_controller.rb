@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
 
   def index
-    render json: User.all
+    render json: User.all.order(:quote_count).reverse
   end
 
   def show
-    render json: User.find(params[:id])
+    user = User.find(params[:id])
+    madq = MadQuote.where(user_id: user.id)
+    render json: [user, madq]
   end
 
   def create

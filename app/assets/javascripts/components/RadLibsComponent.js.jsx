@@ -25,11 +25,6 @@ var RadLibs = React.createClass({
 								<p className="origAuth"></p>
 							</div>
 						</div>
-						<div className="inspire-box center">
-							<div className="inspire">
-							</div>
-							<button className="reload create-button btn" onClick={this.reload}>Create again?!</button>
-						</div>
 					</div> 
 					<div className="startQuote">
 						<div className="directions center2">
@@ -47,6 +42,11 @@ var RadLibs = React.createClass({
 						</div> 
 					</div>         
 				</section>
+					<div className="inspire-box center">
+						<div className="inspire">
+						</div>
+						<button className="reload create-button btn" onClick={this.reload}>Create again?!</button>
+					</div>
 				<div className="logout-box">
 					<button className="logout-button btn" onClick={this.logout}>Logout</button>
 				</div>
@@ -71,19 +71,20 @@ var RadLibs = React.createClass({
 		newQuote = newQuote.replace(/__ADJECTIVE__/g, adj);
 		var endQuote = newQuote;
 		$(".startQuote").hide();
-		$(".new").html(endQuote);
+		$(".new").html('“' + endQuote + '”');
 		$(".origAuth").html("—" + originalAuthor);
 		$(".new").hide();
 		$(".new").fadeIn(1000);
-		$(".orig").html(Origquote);
+		$(".orig").html('“' + Origquote + '”');
 		$(".orig").hide();
 		$(".orig").fadeIn(1000);
 		$(".newQuotePage").fadeIn(1000);
 		$(".noun-grab").val("");
 		$(".verb-grab").val("");
 		$(".adj-grab").val("");
+		$(".inspire-box").fadeIn(1000);
 		$.get("inspire/show",function(inspi){
-			$(".inspire").html('" ' + inspi.inspire + ' "')
+			$(".inspire").html('“' + inspi.inspire + '”')
 		})
 		$.post("mad_quotes", {
 			user_id: user.id,
@@ -100,6 +101,7 @@ var RadLibs = React.createClass({
 	reload: function(){
 		$(".newQuotePage").hide();
 		$(".startQuote").fadeIn(1000);
+		$(".inspire-box").hide();
 		myApp.navigate("");
 		myApp.navigate("radlibs", {trigger: true})
 
@@ -108,8 +110,18 @@ var RadLibs = React.createClass({
  		myApp.navigate("", {trigger: true})
 		$(".regi-page").hide();
 		$(".login-page").fadeIn(1000);
-		$(".signup-button").hide();
-		$(".hide-me-relog").hide();
+		$(".registration-form").submit(function(e){
+			e.preventDefault();
+			var newUser = new UserModel({
+				name: $(".name-reg").val(),
+				password: $(".password-reg").val(),
+				password_confirmation: $(".password-conf-reg").val(),
+				email: $(".email-reg").val()
+			});
+				$(".regi-page").hide();
+				$(".login-page").fadeIn(1000);
+				newUser.save();
+		});
 		$(".login-form").submit(function(e){
 			e.preventDefault();
 			$.post(
@@ -129,6 +141,16 @@ var RadLibs = React.createClass({
 				alert("Please enter a valid name and password!")
 
 			})
+		})
+		$(".login-button").click(function(){
+			$(".regi-page").hide();
+			$(".login-page").fadeIn(1000);
+
+		})
+		$(".signup-button").click(function(){
+			$(".login-page").hide();
+			$(".regi-page").fadeIn(1000);
+
 		})
 	}
 });
