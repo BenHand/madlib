@@ -72,7 +72,7 @@ var RadLibs = React.createClass({
 		var endQuote = newQuote;
 		$(".startQuote").hide();
 		$(".new").html('“' + endQuote + '”');
-		$(".origAuth").html("—" + originalAuthor);
+		$(".origAuth").html("— " + originalAuthor);
 		$(".new").hide();
 		$(".new").fadeIn(1000);
 		$(".orig").html('“' + Origquote + '”');
@@ -94,7 +94,7 @@ var RadLibs = React.createClass({
 		}, "json")
 		setTimeout(750, $.get("mad_quotes", function(madquote){
 			for(var i=0; i < madquote.length; i++){
-				$(".newAuth").html("—" + madquote[i].fun_author);
+				$(".newAuth").html("— " + madquote[i].fun_author);
 			}
 		}))
 	},
