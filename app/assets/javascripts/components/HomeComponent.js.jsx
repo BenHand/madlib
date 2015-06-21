@@ -11,7 +11,7 @@ var Home = React.createClass({
 							<div className="left"></div>
 							<div className="center">
 								<h3>"Say '<span className="noun">boy</span>' to my little <span className="noun">farm</span>!"</h3>
-								<p> -- Carissa Montana</p>
+								<p> —Carissa Montana</p>
 							</div>
 						</div>
 					</div>
@@ -19,7 +19,7 @@ var Home = React.createClass({
 						<div className="center">
 							<h3>Look familiar?</h3>
 							<h3>"Say 'hello' to my little friend!"</h3>
-							<p> -- Tony Montana</p>
+							<p> —Tony Montana</p>
 						</div>
 					</div>
 				</section>

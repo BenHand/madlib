@@ -15,6 +15,7 @@ header {
 
 .sample-quote {
 	@include grid(10);
+	font-style: italic;
 	background: white;
 	padding: 20px;
 
@@ -29,7 +30,7 @@ header {
 
 	p {
 		padding-top: 20px;
-		padding-bottom: 30px;
+		padding-bottom: 40px;
 	}
 
 }
@@ -44,7 +45,15 @@ header {
 		font-weight: 200;
 	}
 
+	h3 {
+		padding-bottom: 20px;
+	}
+
 	h3:nth-of-type(2) {
+		font-style: italic;
+	}
+
+	p {
 		font-style: italic;
 	}
 }
@@ -113,6 +122,7 @@ $box-width: 90%;
 
 .start {
 	overflow: hidden;
+	height: 555px;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	transition: background ease 1s;
@@ -141,6 +151,11 @@ form input {
 	font-size: 1rem;
 	margin: 0.875rem;
 	padding: 0.5rem;
+
+	&:focus {
+		outline: 0;
+		border: 1px solid $blue;
+	}
 }
 
 .btn {
@@ -252,6 +267,25 @@ form input {
 	background: $blue;
 }
 
+// CREATE AGAIN/INSPIRE -----------------------------------------
+
+.inspire-box {
+	display: none;
+	padding-bottom: 40px;
+
+	.inspire {
+		padding-bottom: 20px;
+		font-size: 18px;
+		font-size: 1.125rem;
+		color: $black;
+
+	}	
+
+	.create-button {
+		margin: 0 auto;
+	}
+}
+
 // LOGOUT -----------------------------------------
 
 .logout-box {
@@ -285,4 +319,5 @@ footer {
 		text-decoration: underline;
 	}
 }
+
 
