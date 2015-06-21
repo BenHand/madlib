@@ -29,9 +29,6 @@ var UserModel = Backbone.Model.extend({
 		else if(attr.password != attr.password_confirmation){
 			return 'You must enter the same password.';
 		}
-		else if(attr.password.length < 6) {
-			return 'Your password must be at least six characters.';
-		}
 		return false;
 	}
 })

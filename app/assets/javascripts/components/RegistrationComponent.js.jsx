@@ -18,7 +18,7 @@ var Registration = React.createClass({
                                 <input type="password" className="password-reg" placeholder="Password"/>
                                 </div>
                                 <div>
-                                <input type="password" className="password-conf-reg" placeholder="Password"/>
+                                <input type="password" className="password-conf-reg" placeholder="Password Confirmation"/>
                                 </div>
                                 <button className="create-button btn">Register</button>
                             </form>
