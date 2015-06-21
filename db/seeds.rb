@@ -169,5 +169,8 @@ Inspiration.create(inspire: "If at first you don't succeed, try, try again.")
 Inspiration.create(inspire: "Never think about the mistakes you've made. Think about the mistakes you will make.")
 Inspiration.create(inspire: "Every artist was first an amateur.")
 Inspiration.create(inspire: "Nothing is impossible, the word itself says 'I'm possible!'")
-User.create(name: 'ben', email: 'ben@ben.com', password: 'benspw', password_confirmation: 'benspw')
 
+User.create(name: 'ben', email: 'ben@ben.com',
+        password: 'benspw', password_confirmation: 'benspw')
+User.create(name: 'Casie', email: 'casie@casie.com',
+        password: 'casie', password_confirmation: 'casie')
