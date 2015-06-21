@@ -22,7 +22,7 @@ var Registration = React.createClass({
                                 </div>
                                 <button className="create-button btn">Register</button>
                             </form>
-                        	<div>
+                        	<div className="center">
                                 <h4>Already an author?</h4>
                                 <button className="login-button btn">Login now!</button>
                             </div>

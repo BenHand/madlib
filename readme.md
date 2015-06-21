@@ -5,7 +5,8 @@
     Austin, TX: <a href="https://github.com/cczapski">Casie Czapski</a> on Design(SCSS, HTML), <a href="https://github.com/jlagrange87">Joshua Lagrange</a> on Front End(React, JQuery, VanJS), and <a href="https://github.com/BenHand">Ben Hand</a> on Back End(RoR, PG).
   * <a href="https://github.com/BenHand/madlib/tree/master/app/assets/images/style_tiles">Style Tiles</a>, <a href="https://github.com/BenHand/madlib/tree/master/app/assets/images/radlibs_wireframes">Wire Frames</a>, <a href="https://github.com/BenHand/madlib/tree/master/app/assets/images/UML">UML</a>, Logo all w/in app/assets/images directory
   * Trello ScrumBoard <a href="https://trello.com/b/3wAeQJSC/madlib">here</a>.
-  * Try out RadLibs <a href="http://radlib.herokuapp.com/">here</a>.
+
+## Try out RadLibs <a href="http://radlib.herokuapp.com/">here</a>.
 
 ## Installation Steps
 
@@ -22,6 +23,9 @@
 ## How To Use
  *  In the browser go to localhost:3000
  *  Create an Account/Login and start enjoying
+
+### Final UML
+![Alt text](app/assets/images/UML/finalUML.png?raw=true "Final UML")
 
 ### Directory Tree
 
@@ -178,6 +182,3 @@
         ├── javascripts
         └── stylesheets
 ```
-
-## Final UML
-![Alt text](app/assets/images/UML/finalUML.png?raw=true "Final UML")
