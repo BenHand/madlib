@@ -6,7 +6,7 @@ var App = Backbone.Router.extend({
 				"radlibs":          "radlibs"     
 		},
 		home: function() {
-			React.render(<Home/>, document.querySelector('#container'));
+				React.render(<Home/>, document.querySelector('#container'));
 		},
 		profile: function(user) {
 			React.render(<Profile user={user}/>, document.querySelector('#container'));
