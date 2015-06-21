@@ -6,7 +6,7 @@ var App = Backbone.Router.extend({
 				"radlibs":          "radlibs"     
 		},
 		home: function() {
-			React.render(<Home/>, document.querySelector('#container'));
+				React.render(<Home/>, document.querySelector('#container'));
 		},
 		profile: function(user) {
 			React.render(<Profile user={user}/>, document.querySelector('#container'));
@@ -26,15 +26,25 @@ var user = null;
 
 $(".registration-form").submit(function(e){
 	e.preventDefault();
+	var username = $(".name-reg").val();
+	var pass = $(".password-reg").val();
+	var passCon = $(".password-conf-reg").val();
+	var userEmail = $(".email-reg").val();
 	var newUser = new UserModel({
-		name: $(".name-reg").val(),
-		password: $(".password-reg").val(),
-		password_confirmation: $(".password-conf-reg").val(),
-		email: $(".email-reg").val()
+		name: username,
+		password: pass,
+		password_confirmation: passCon,
+		email: userEmail
 	});
-		$(".regi-page").hide();
-		$(".login-page").fadeIn(1000);
-		newUser.save();
+	if(!newUser.isValid()) {
+		alert(newUser.validationError);
+	}
+	else{
+	$(".regi-page").hide();
+	$(".login-page").fadeIn(1000);
+	newUser.save();
+	myApp.navigate("radlibs", {trigger: true})
+	}
 });
 $(".login-form").submit(function(e){
 	e.preventDefault();
@@ -49,7 +59,6 @@ $(".login-form").submit(function(e){
 	.success(function(u){
 		user = u
 		myApp.navigate("radlibs", {trigger: true})
-		console.log(user);
 	})
 	.error(function(errorMsg){
 		alert("Please enter a valid name and password!")

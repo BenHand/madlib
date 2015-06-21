@@ -1,17 +1,25 @@
 class MadQuotesController < ApplicationController
 
   def index
-    render json: MadQuote.all
+    render json: MadQuote.all, status: 200
   end
 
   def show
-    render json: MadQuote.find(params[:id])
+    render json: MadQuote.find(params[:id]), status: 200
+  end
+
+# method for main page to show a created mad quote with associated original quote
+  def mad_orig
+    mad_quotes = MadQuote.all
+    mad_quote  = mad_quotes.sample
+    orig_quote = OriginalQuote.where(id: mad_quote.original_quote_id)
+    render json: [mad_quote, orig_quote], status: 200
   end
 
   def create
     user        = User.find(params[:user_id])
-    user.quote_count += 1
-    user.save
+      user.quote_count += 1
+      user.save
     original    = OriginalQuote.find(params[:original_quote_id])
     author_name = original.author.split(" ")
     user_name   = user.name.split(" ")
@@ -20,7 +28,8 @@ class MadQuotesController < ApplicationController
     mad_quote   = MadQuote.create(fun_quote: fun_quote,
                                  fun_author: fun_author,
                                     user_id: user.id,
-                          original_quote_id: original.id)
+                          original_quote_id: original.id,
+                                 span_quote: params[:fun_quote])
 
     render json: mad_quote, status: 200
   end
