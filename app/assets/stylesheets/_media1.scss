@@ -21,7 +21,7 @@
 	overflow: hidden;
 	z-index: 1;
 	background: $blue;
-	padding: 50px;
+	padding: 50px 50px 70px 50px;
 }
 
 
@@ -79,7 +79,6 @@ form input {
 }
 
 .inspire-box {
-	background: $green;
 	padding: 0;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -88,10 +87,8 @@ form input {
 
 	.inspire {
 		padding-bottom: 20px;
-		font-size: 18px;
-		font-size: 1.125rem;
-		color: white;
-
+		font-size: 20px;
+		font-size: 1.25rem;
 	}	
 }
 
