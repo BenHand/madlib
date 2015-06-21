@@ -120,9 +120,15 @@ var RadLibs = React.createClass({
 				password_confirmation: $(".password-conf-reg").val(),
 				email: $(".email-reg").val()
 			});
-				$(".regi-page").hide();
-				$(".login-page").fadeIn(1000);
-				newUser.save();
+			if(!newUser.isValid()) {
+				alert(newUser.validationError);
+			}
+			else{
+			$(".regi-page").hide();
+			$(".login-page").fadeIn(1000);
+			newUser.save();
+			myApp.navigate("radlibs", {trigger: true})
+			}
 		});
 		$(".login-form").submit(function(e){
 			e.preventDefault();
