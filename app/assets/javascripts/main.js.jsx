@@ -40,11 +40,22 @@ $(".registration-form").submit(function(e){
 		alert(newUser.validationError);
 	}
 	else{
-	$(".regi-page").hide();
-	$(".login-page").fadeIn(1000);
-	newUser.save();
-	myApp.navigate("radlibs", {trigger: true})
+		$(".regi-page").hide();
+		$(".login-page").fadeIn(1000);
+		newUser.save();
 	}
+	$.post(
+		"/sessions/create",
+		{
+			email: userEmail,
+			password: pass
+		}
+
+	)
+	.success(function(u){
+		user = u
+		myApp.navigate("radlibs", {trigger: true})
+	})
 });
 $(".login-form").submit(function(e){
 	e.preventDefault();

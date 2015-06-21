@@ -120,6 +120,10 @@ var RadLibs = React.createClass({
 		$(".login-page").fadeIn(1000);
 		$(".registration-form").submit(function(e){
 			e.preventDefault();
+			var username = $(".name-reg").val();
+			var pass = $(".password-reg").val();
+			var passCon = $(".password-conf-reg").val();
+			var userEmail = $(".email-reg").val();
 			var newUser = new UserModel({
 				name: $(".name-reg").val(),
 				password: $(".password-reg").val(),
@@ -130,11 +134,22 @@ var RadLibs = React.createClass({
 				alert(newUser.validationError);
 			}
 			else{
-			$(".regi-page").hide();
-			$(".login-page").fadeIn(1000);
-			newUser.save();
-			myApp.navigate("radlibs", {trigger: true})
+				$(".regi-page").hide();
+				$(".login-page").fadeIn(1000);
+				newUser.save();
 			}
+			$.post(
+				"/sessions/create",
+				{
+					email: userEmail,
+					password: pass
+				}
+
+			)
+			.success(function(u){
+				user = u
+				myApp.navigate("radlibs", {trigger: true})
+			})
 		});
 		$(".login-form").submit(function(e){
 			e.preventDefault();
@@ -149,7 +164,6 @@ var RadLibs = React.createClass({
 			.success(function(u){
 				user = u
 				myApp.navigate("radlibs", {trigger: true})
-				console.log(user);
 			})
 			.error(function(errorMsg){
 				alert("Please enter a valid name and password!")
