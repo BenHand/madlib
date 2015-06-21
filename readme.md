@@ -2,10 +2,9 @@
   * Remember adlibs? Of course you do! Radlibs is adlibs using famous quotes
     from movies, pop-culture, past genuises..and more.
   * This is a Hackathon project from 3 Iron Yard students based in
-    Austin, TX: <a href="https://github.com/cczapski">Casie Czapski</a> on Design(SCSS, HTML), <a href="https://github.com/jlagrange87">Joshua Lagrange</a> on Front End(React, JQuery, VanJS), and <a href="https://github.com/BenHand">Ben Hand</a> on Back End(RoR, PG). Original idea pitched by Ben Hand; planned and executed as
-    a team.
+    Austin, TX: <a href="https://github.com/cczapski">Casie Czapski</a> on Design(SCSS, HTML), <a href="https://github.com/jlagrange87">Joshua Lagrange</a> on Front End(React, JQuery, VanJS), and <a href="https://github.com/BenHand">Ben Hand</a> on Back End(RoR, PG).
   * Style Tiles, Wire Frames, UML, Logo all w/in app/assets/images directory
-  * Trello ScrumBoard <a href"https://trello.com/b/3wAeQJSC/madlib">here</a>.
+  * Trello ScrumBoard <a href="https://trello.com/b/3wAeQJSC/madlib">here</a>.
 
 ## Installation Steps
 
