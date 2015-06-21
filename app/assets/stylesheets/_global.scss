@@ -123,8 +123,7 @@ $box-width: 90%;
 .start {
 	overflow: hidden;
 	height: 555px;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding: 40px;
 	transition: background ease 1s;
 	@include grid(10);
 	label {
