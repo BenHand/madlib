@@ -1,11 +1,11 @@
 class MadQuotesController < ApplicationController
 
   def index
-    render json: MadQuote.all
+    render json: MadQuote.all, status: 200
   end
 
   def show
-    render json: MadQuote.find(params[:id])
+    render json: MadQuote.find(params[:id]), status: 200
   end
 
 # method for main page to show a created mad quote with associated original quote
@@ -13,7 +13,7 @@ class MadQuotesController < ApplicationController
     mad_quotes = MadQuote.all
     mad_quote  = mad_quotes.sample
     orig_quote = OriginalQuote.where(id: mad_quote.original_quote_id)
-    render json: [mad_quote, orig_quote]
+    render json: [mad_quote, orig_quote], status: 200
   end
 
   def create
