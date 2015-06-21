@@ -15,6 +15,7 @@ header {
 
 .sample-quote {
 	@include grid(10);
+	font-style: italic;
 	background: white;
 	padding: 20px;
 
@@ -29,7 +30,7 @@ header {
 
 	p {
 		padding-top: 20px;
-		padding-bottom: 30px;
+		padding-bottom: 40px;
 	}
 
 }
@@ -44,7 +45,15 @@ header {
 		font-weight: 200;
 	}
 
+	h3 {
+		padding-bottom: 20px;
+	}
+
 	h3:nth-of-type(2) {
+		font-style: italic;
+	}
+
+	p {
 		font-style: italic;
 	}
 }
@@ -249,6 +258,24 @@ form input {
 
 .startQuote {
 	background: $blue;
+}
+
+// CREATE AGAIN/INSPIRE -----------------------------------------
+
+.inspire-box {
+	padding-bottom: 40px;
+
+	.inspire {
+		padding-bottom: 20px;
+		font-size: 18px;
+		font-size: 1.125rem;
+		color: $black;
+
+	}	
+
+	.create-button {
+		margin: 0 auto;
+	}
 }
 
 // LOGOUT -----------------------------------------

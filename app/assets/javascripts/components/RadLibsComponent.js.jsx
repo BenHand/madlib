@@ -14,7 +14,7 @@ var RadLibs = React.createClass({
 								<div className="left"></div>
 								<div className="center">
 									<h3 className="new"></h3>
-									<p className="newAuth"> -- Author</p>
+									<p className="newAuth"> —Author</p>
 								</div>
 							</div>
 						</div> 
@@ -25,9 +25,11 @@ var RadLibs = React.createClass({
 								<p className="origAuth"></p>
 							</div>
 						</div>
-						<div className="inspire">
+						<div className="inspire-box center">
+							<div className="inspire">
+							</div>
+							<button className="reload create-button btn" onClick={this.reload}>Create again?!</button>
 						</div>
-						<button className="reload" onClick={this.reload}>Create again?</button>
 					</div> 
 					<div className="startQuote">
 						<div className="directions center2">
@@ -70,7 +72,7 @@ var RadLibs = React.createClass({
 		var endQuote = newQuote;
 		$(".startQuote").hide();
 		$(".new").html(endQuote);
-		$(".origAuth").html("-- " + originalAuthor);
+		$(".origAuth").html("—" + originalAuthor);
 		$(".new").hide();
 		$(".new").fadeIn(1000);
 		$(".orig").html(Origquote);
@@ -91,7 +93,7 @@ var RadLibs = React.createClass({
 		}, "json")
 		setTimeout(750, $.get("mad_quotes", function(madquote){
 			for(var i=0; i < madquote.length; i++){
-				$(".newAuth").html("-- " + madquote[i].fun_author);
+				$(".newAuth").html("—" + madquote[i].fun_author);
 			}
 		}))
 	},

@@ -6,6 +6,10 @@ html {
 	box-sizing: inherit;
 } 
 
+.container {
+	overflow: hidden;
+}
+
 $one-fifth: 20%;
 $two-fifths: 40%;
 $three-fifths: 60%;
@@ -20,8 +24,6 @@ $col: 8.2%;
 @mixin grid($num-cols) {
 	width: ($col * $num-cols) + ($gut * (($num-cols) - 1));
 	margin-right: $gut;
-	padding-top: 20px;
-	padding-bottom: 20px;
 	float: left;
 	background: white;
 }
