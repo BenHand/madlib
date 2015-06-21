@@ -1,4 +1,4 @@
-# RadLibs
+# RadLibs ![Alt text](app/assets/images/radlib_logo.png?raw=true "our logo")
   * Remember adlibs? Of course you do! Radlibs is adlibs using famous quotes
     from movies, pop-culture, past genuises..and more.
   * This is a Hackathon project from 3 Iron Yard students based in
