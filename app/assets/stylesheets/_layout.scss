@@ -10,13 +10,23 @@ html {
 	overflow: hidden;
 }
 
-$one-fifth: 20%;
-$two-fifths: 40%;
-$three-fifths: 60%;
-$four-fifths: 80%;
-$full: 100%;
+header {
 
-$six-tenths: 60%;
+	.logo-header {
+		padding: 100px 0;
+		text-align: center;
+
+		h1, img {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		// h1 {
+		// 	padding-left: 1rem;
+		// }
+	}
+}
 
 $gut: 2%;
 $col: 8.2%;
