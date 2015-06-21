@@ -18,6 +18,10 @@
  *  Run `rails s` to start the server
 ```
 
+## How To Use
+ *  In the browser go to localhost:3000
+ *  Create an Account/Login and start enjoying
+
 ### Directory Tree
 
 ```
