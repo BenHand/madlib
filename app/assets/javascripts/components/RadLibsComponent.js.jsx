@@ -4,6 +4,7 @@ var RadLibs = React.createClass({
 		var Origquote = null
 		var changedInput = null
 		var originalAuthor = null
+		var userAuthor = null
 		var newAuthor = null
 		
 		return (
@@ -18,7 +19,7 @@ var RadLibs = React.createClass({
 								<div className="left"></div>
 								<div className="center">
 									<h3 className="new"></h3>
-									<p className="newAuth"> —Author</p>
+									<p className="newAuth"></p>
 								</div>
 							</div>
 						</div> 
@@ -71,7 +72,12 @@ var RadLibs = React.createClass({
 		Origquote = this.props.quote.quote;
 		changedInput = this.props.quote.input_quote;
 		originalAuthor = this.props.quote.author;
-		newAuthor = user.name
+		userAuthor = user.name.split(" ");
+		mergeAuthor = originalAuthor.split(" ")
+		console.log(originalAuthor);
+		console.log(userAuthor);
+		newAuthor = userAuthor[0] + " " + mergeAuthor[1];
+		console.log(newAuthor);
 		newQuote = changedInput.replace(/__NOUN__/g, noun);
 		newQuote = newQuote.replace(/__VERB__/g, verb);
 		newQuote = newQuote.replace(/__ADJECTIVE__/g, adj);
@@ -79,6 +85,7 @@ var RadLibs = React.createClass({
 		$(".startQuote").hide();
 		$(".new").html('“' + endQuote + '”');
 		$(".origAuth").html("— " + originalAuthor);
+		$(".newAuth").html("— " + newAuthor)
 		$(".new").hide();
 		$(".new").fadeIn(1000);
 		$(".orig").html('“' + Origquote + '”');
@@ -98,11 +105,6 @@ var RadLibs = React.createClass({
 			fun_quote: endQuote
 
 		}, "json")
-		setTimeout(750, $.get("mad_quotes", function(madquote){
-			for(var i=0; i < madquote.length; i++){
-				$(".newAuth").html("— " + madquote[i].fun_author);
-			}
-		}))
 	},
 	reload: function(){
 		$(".newQuotePage").hide();
