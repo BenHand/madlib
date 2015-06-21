@@ -223,6 +223,8 @@ form input {
 
 .newQuotePage {
 	display:none;
+	overflow: hidden;
+	margin: 0 auto;
 }
 
 .word-input {
@@ -272,13 +274,15 @@ form input {
 
 .inspire-box {
 	display: none;
-	padding-bottom: 40px;
+	padding: 40px;
+	clear: both;
 
 	.inspire {
 		padding-bottom: 20px;
 		font-size: 18px;
 		font-size: 1.125rem;
 		color: $black;
+		font-style: italic;
 
 	}	
 
