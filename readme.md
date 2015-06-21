@@ -1,7 +1,11 @@
+# RadLibs
+  * Remember adlibs?
+
 ## Installation Steps
 
-1. Run `gem install bundler`
-1. Run `bundle install`
-1. Run `rake db:create` #Will need to have postgres setup and running
-1. Run `rails s` to start the server
+ *  Run `gem install bundler`
+ *  Run `bundle install`
+ *  Run `rake db:create` #Will need to have postgres setup and running
+ *  Run `rake db:seed` to populate the db with quotes
+ *  Run `rails s` to start the server
 

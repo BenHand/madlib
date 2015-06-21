@@ -8,10 +8,18 @@ class MadQuotesController < ApplicationController
     render json: MadQuote.find(params[:id])
   end
 
+# method for main page to show a created mad quote with associated original quote
+  def mad_orig
+    mad_quotes = MadQuote.all
+    mad_quote  = mad_quotes.sample
+    orig_quote = OriginalQuote.where(id: mad_quote.original_quote_id)
+    render json: [mad_quote, orig_quote]
+  end
+
   def create
     user        = User.find(params[:user_id])
-    user.quote_count += 1
-    user.save
+      user.quote_count += 1
+      user.save
     original    = OriginalQuote.find(params[:original_quote_id])
     author_name = original.author.split(" ")
     user_name   = user.name.split(" ")
