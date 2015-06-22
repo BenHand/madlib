@@ -152,9 +152,6 @@ OriginalQuote.create(author: "Lao Tzu",
 OriginalQuote.create(author: "Jack Byrnes",
                       quote: "...I have nipples, Greg. Could you milk me?",
                 input_quote: "...I have __NOUN__, Greg. Could you __VERB__ me?")
-# OriginalQuote.create(author: "",
-#                       quote: "",
-#                 input_quote: "")
 
 Inspiration.create(inspire: "The measure of who we are is what we do with what we have.")
 Inspiration.create(inspire: "If you can dream it, you can do it.")
@@ -169,8 +166,3 @@ Inspiration.create(inspire: "If at first you don't succeed, try, try again.")
 Inspiration.create(inspire: "Never think about the mistakes you've made. Think about the mistakes you will make.")
 Inspiration.create(inspire: "Every artist was first an amateur.")
 Inspiration.create(inspire: "Nothing is impossible, the word itself says 'I'm possible!'")
-
-User.create(name: 'Ben', email: 'ben@ben.com',
-        password: 'benspw', password_confirmation: 'benspw')
-User.create(name: 'Casie', email: 'casie@casie.com',
-        password: 'casie', password_confirmation: 'casie')
